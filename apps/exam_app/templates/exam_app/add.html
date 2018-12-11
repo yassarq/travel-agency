@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Add Trip</title>
+  </head>
+  <body>
+    <a href="/dashboard">Home</a>
+    <a href="/logout">Logout</a>
+    <h1>Add a Trip</h1>
+    <form class="" action="/createtrip" method="post">
+      {%csrf_token%}
+      <input type="text" name="destination" placeholder="Destination">
+      <br>
+      <input type="text" name="description" placeholder="Description">
+      <br>
+      Travel Start Date: <input type="date" name="travel_start">
+      <br>
+      Travel End Date: <input type="date" name="travel_end">
+      <br>
+      <input type="submit" name="" value="Add">
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <p >{{ message }}</p>
+        {% endfor %}
+    {% endif %}    
+  </body>
+</html>

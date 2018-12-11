@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <title>Show Trip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>{{ trip.destination }}</h1>
+  <h2>Planned By: {{ trip.planner.name}}</h2>
+  <h2>Description: {{ trip.description}}</h2>
+  <h2>Travel Date From: {{ trip.travel_start}}</h2>
+  <h2>Travel Date To: {{ trip.travel_end}}</h2>
+
+  <h1>Other user's joining the trip</h1>
+  {% for i in trip.joiners.all %}
+    <p>{{ i.name }}</p>
+  {% endfor %}
+  
+</body>
+</html>
