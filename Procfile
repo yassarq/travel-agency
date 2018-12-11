@@ -1,1 +1,1 @@
-web: gunicorn gettingstarted.wsgi
+web: gunicorn YOURSITE.wsgi --log-level=info --log-file -

@@ -20,6 +20,7 @@ pycodestyle==2.4.0
 pycparser==2.18
 pylint==1.9.1
 PyMySQL==0.8.1
+python-dotenv==0.10.0
 pytz==2018.4
 six==1.11.0
 virtualenv==16.0.0
